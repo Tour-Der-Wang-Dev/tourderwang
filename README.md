@@ -30,7 +30,7 @@ File Structure
 
 Installation
 
-Clone the repository:git clone https://github.com/your-username/tour-der-wang.git
+Clone the repository:[git clone https://github.com/your-username/tour-der-wang.git](https://github.com/Tour-Der-Wang-Dev/tourderwang.git)
 
 
 Navigate to the project directory:cd tour-der-wang
