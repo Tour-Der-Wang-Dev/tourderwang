@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Der Wang - บริการโฆษณาและคอนเทนต์</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #FFF9F2;
+        }
+        
+        .hero-pattern {
+            background-color: #FFEDD5;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD7A8' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(253, 186, 116, 0.3);
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .package-card:hover {
+            transform: scale(1.03);
+            border-color: #FDBA74;
+        }
+        
+        .highlight-package {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(253, 186, 116, 0.4);
+        }
+        
+        .highlight-package:hover {
+            transform: scale(1.08);
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #FFEDD5 0%, #FEE2B3 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10" src="https://img5.pic.in.th/file/secure-sv1/307460108_387435583599238_6386334495691428178_n-removebg-preview.png" alt="Tour Der Wang Logo">
+                        <span class="ml-2 text-xl font-semibold text-orange-600">Tour Der Wang</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#services" class="text-orange-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">บริการ</a>
+                    <a href="#stats" class="text-orange-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">ผลงาน</a>
+                    <a href="#testimonials" class="text-orange-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">รีวิว</a>
+                    <a href="#pricing" class="text-orange-900 hover:text-orange-600 px-3 py-2 text-sm font-medium">แพคเกจ</a>
+                    <a href="#contact" class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-600 transition">ติดต่อเรา</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-orange-900 hover:text-orange-600 focus:outline-none" id="mobile-menu-button">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#services" class="text-orange-900 hover:text-orange-600 block px-3 py-2 text-base font-medium">บริการ</a>
+                <a href="#stats" class="text-orange-900 hover:text-orange-600 block px-3 py-2 text-base font-medium">ผลงาน</a>
+                <a href="#testimonials" class="text-orange-900 hover:text-orange-600 block px-3 py-2 text-base font-medium">รีวิว</a>
+                <a href="#pricing" class="text-orange-900 hover:text-orange-600 block px-3 py-2 text-base font-medium">แพคเกจ</a>
+                <a href="#contact" class="bg-orange-500 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-orange-600 transition">ติดต่อเรา</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-orange-900 mb-6">โฆษณาบนเพจคุณภาพ <br>เข้าถึงผู้ชมหลักล้าน</h1>
+                <p class="mt-6 text-xl text-orange-800 max-w-3xl mx-auto">
+                    บริการโฆษณาบนเพจ Tour Der Wang ผู้ติดตามกว่า 100,000 คน<br>
+                    ด้วยคอนเทนต์คุณภาพและการนำเสนอที่สร้างสรรค์
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-orange-600 hover:bg-orange-700 transition">
+                        สนใจโฆษณากับเรา
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-orange-900">บริการของเรา</h2>
+                <p class="mt-4 text-lg text-orange-800 max-w-2xl mx-auto">
+                    เรามอบบริการครบวงจรสำหรับการโฆษณาและการสร้างคอนเทนต์
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-ad text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">โฆษณาบนเพจ</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        โพสต์โฆษณาบนเพจ Tour Der Wang ที่มีผู้ติดตามกว่า 100,000 คน 
+                        เข้าถึงกลุ่มเป้าหมายที่สนใจการท่องเที่ยวและไลฟ์สไตล์
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-pen-fancy text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">เขียนบทความ</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        บทความคุณภาพ เนื้อหาสร้างสรรค์ เขียนโดยทีมงานมืออาชีพ 
+                        เพื่อโปรโมทผลิตภัณฑ์หรือบริการของคุณอย่างมีประสิทธิภาพ
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-camera text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">ถ่ายภาพ</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        บริการถ่ายภาพผลิตภัณฑ์ อาหาร หรือสถานที่ 
+                        โดยช่างภาพมืออาชีพ เพื่อใช้ในการโฆษณาและโปรโมท
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-microphone text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">พากย์เสียง</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        บริการพากย์เสียงสำหรับวิดีโอโฆษณา หรือคอนเทนต์ต่างๆ 
+                        ด้วยเสียงพากย์มืออาชีพ น่าฟัง และเป็นธรรมชาติ
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-star text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">รีวิวผลิตภัณฑ์</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        บริการรีวิวผลิตภัณฑ์หรือบริการอย่างตรงไปตรงมา 
+                        เพื่อสร้างความน่าเชื่อถือให้กับแบรนด์ของคุณ
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-full">
+                            <i class="fas fa-globe text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-medium text-orange-900">สร้างเว็บไซต์</h3>
+                    </div>
+                    <p class="text-orange-800">
+                        ออกแบบและพัฒนเว็บไซต์สำหรับธุรกิจของคุณ 
+                        ทั้งเว็บไซต์แสดงผลและเว็บไซต์ขายของออนไลน์
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div id="stats" class="py-16 bg-orange-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-orange-900">ผลงานของเรา</h2>
+                <p class="mt-4 text-lg text-orange-800 max-w-2xl mx-auto">
+                    ตัวเลขที่พิสูจน์ถึงประสิทธิภาพของการโฆษณากับเรา
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stat 1 -->
+                <div class="stat-card rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-orange-900 text-5xl font-bold mb-2">100,000+</div>
+                    <div class="text-orange-800 font-medium">ผู้ติดตาม</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="stat-card rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-orange-900 text-5xl font-bold mb-2">1,000,000+</div>
+                    <div class="text-orange-800 font-medium">การเข้าถึงต่อเดือน</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="stat-card rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-orange-900 text-5xl font-bold mb-2">500+</div>
+                    <div class="text-orange-800 font-medium">โครงการที่เสร็จสิ้น</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="stat-card rounded-lg p-6 text-center shadow-sm">
+                    <div class="text-orange-900 text-5xl font-bold mb-2">95%</div>
+                    <div class="text-orange-800 font-medium">ความพึงพอใจจากลูกค้า</div>
+                </div>
+            </div>
+            
+            <!-- Gallery -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://img5.pic.in.th/file/secure-sv1/image-154ab127eb3dcc1779.jpg" alt="ตัวอย่างงาน" class="w-full h-auto">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://img2.pic.in.th/pic/image-19f4bb7a9e083dc11a.jpg" alt="ตัวอย่างงาน" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-orange-900">รีวิวจากลูกค้า</h2>
+                <p class="mt-4 text-lg text-orange-800 max-w-2xl mx-auto">
+                    ความประทับใจจากลูกค้าที่ใช้บริการของเรา
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center">
+                            <i class="fas fa-user text-orange-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-orange-900">คุณสมชาย</h4>
+                            <p class="text-orange-700 text-sm">เจ้าของร้านอาหาร</p>
+                        </div>
+                    </div>
+                    <p class="text-orange-800 italic">
+                        "หลังจากโฆษณากับ Tour Der Wang ยอดขายเพิ่มขึ้นกว่า 30% ในเดือนแรก 
+                        คอนเทนต์ดี มีความคิดสร้างสรรค์ และทีมงานเป็นมืออาชีพมาก"
+                    </p>
+                    <div class="mt-4 flex text-orange-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center">
+                            <i class="fas fa-user text-orange-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-orange-900">คุณสุนิสา</h4>
+                            <p class="text-orange-700 text-sm">ผู้จัดการโรงแรม</p>
+                        </div>
+                    </div>
+                    <p class="text-orange-800 italic">
+                        "รีวิวที่ Tour Der Wang ทำให้โรงแรมของเรามียอดจองเพิ่มขึ้นอย่างเห็นได้ชัด 
+                        การนำเสนอดีมาก และภาพถ่ายสวยงามน่าประทับใจ"
+                    </p>
+                    <div class="mt-4 flex text-orange-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-orange-50 rounded-lg p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center">
+                            <i class="fas fa-user text-orange-600 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-orange-900">คุณธนวัฒน์</h4>
+                            <p class="text-orange-700 text-sm">เจ้าของแบรนด์สินค้า</p>
+                        </div>
+                    </div>
+                    <p class="text-orange-800 italic">
+                        "พึ่งใช้บริการพากย์เสียงและถ่ายภาพผลิตภัณฑ์ ผลงานออกมาดีเกินคาด 
+                        ทีมงานทำงานรวดเร็ว และให้คำแนะนำที่เป็นประโยชน์มาก"
+                    </p>
+                    <div class="mt-4 flex text-orange-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div id="pricing" class="py-16 bg-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-orange-900">แพคเกจโฆษณา</h2>
+                <p class="mt-4 text-lg text-orange-800 max-w-2xl mx-auto">
+                    เลือกแพคเกจที่เหมาะกับความต้องการของคุณ
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="package-card bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-orange-900 mb-2">แพคเกจพื้นฐาน</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-4">2,500 ฿</div>
+                    <ul class="space-y-3 text-orange-800 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>โพสต์โฆษณา 1 ครั้งบนเพจ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>เนื้อหาบทความพื้นฐาน</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>ภาพประกอบ 2 ภาพ</span>
+                        </li>
+                        <li class="flex items-start text-orange-500">
+                            <i class="fas fa-times mt-1 mr-2"></i>
+                            <span class="line-through">ไม่รวมพากย์เสียง</span>
+                        </li>
+                        <li class="flex items-start text-orange-500">
+                            <i class="fas fa-times mt-1 mr-2"></i>
+                            <span class="line-through">ไม่รวมรีวิวผลิตภัณฑ์</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-orange-100 text-orange-700 py-2 rounded-md font-medium hover:bg-orange-200 transition">
+                        สนใจแพคเกจนี้
+                    </button>
+                </div>
+                
+                <!-- Package 2 (Highlight) -->
+                <div class="package-card highlight-package bg-white rounded-lg p-6 shadow-lg border-orange-300 relative">
+                    <div class="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-bl-md rounded-tr-md">แนะนำ</div>
+                    <h3 class="text-xl font-bold text-orange-900 mb-2">แพคเกจมาตรฐาน</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-4">4,500 ฿</div>
+                    <ul class="space-y-3 text-orange-800 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>โพสต์โฆษณา 2 ครั้งบนเพจ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>บทความคุณภาพ พร้อม SEO</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>ภาพประกอบ 4 ภาพ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>พากย์เสียงพื้นฐาน</span>
+                        </li>
+                        <li class="flex items-start text-orange-500">
+                            <i class="fas fa-times mt-1 mr-2"></i>
+                            <span class="line-through">ไม่รวมรีวิวผลิตภัณฑ์</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-orange-500 text-white py-2 rounded-md font-medium hover:bg-orange-600 transition">
+                        สนใจแพคเกจนี้
+                    </button>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="text-xl font-bold text-orange-900 mb-2">แพคเกจพรีเมียม</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-4">8,500 ฿</div>
+                    <ul class="space-y-3 text-orange-800 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>โพสต์โฆษณา 3 ครั้งบนเพจ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>บทความคุณภาพสูง พร้อม SEO</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>ภาพถ่ายผลิตภัณฑ์ 6 ภาพ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>พากย์เสียงมืออาชีพ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-orange-500 mt-1 mr-2"></i>
+                            <span>รีวิวผลิตภัณฑ์อย่างละเอียด</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-orange-100 text-orange-700 py-2 rounded-md font-medium hover:bg-orange-200 transition">
+                        สนใจแพคเกจนี้
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-orange-800">
+                    มีคำถามเกี่ยวกับแพคเกจหรือต้องการแพคเกจแบบพิเศษ? 
+                    <a href="#contact" class="text-orange-600 font-medium hover:text-orange-800">ติดต่อเราได้เลย</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-orange-900 mb-6">ติดต่อเรา</h2>
+                    <p class="text-orange-800 mb-6">
+                        สนใจใช้บริการโฆษณาหรือมีคำถามเพิ่มเติม? 
+                        ติดต่อเราผ่านช่องทางด้านล่าง หรือกรอกแบบฟอร์มเพื่อให้เราติดต่อกลับ
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full">
+                                <i class="fas fa-envelope text-orange-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-orange-900">อีเมล</h4>
+                                <p class="text-orange-700">tourderwang@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full">
+                                <i class="fas fa-phone-alt text-orange-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-orange-900">โทรศัพท์</h4>
+                                <p class="text-orange-700">062 414 8053</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full">
+                                <i class="fab fa-facebook-messenger text-orange-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-orange-900">Messenger</h4>
+                                <p class="text-orange-700">Tour Der Wang</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full">
+                                <i class="fab fa-line text-orange-600"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-orange-900">LINE</h4>
+                                <p class="text-orange-700">@Cakekritsanan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="bg-orange-50 rounded-lg p-6 shadow-sm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-orange-800 font-medium mb-2">ชื่อ-นามสกุล</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-orange-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-orange-800 font-medium mb-2">อีเมล</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-orange-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-orange-800 font-medium mb-2">เบอร์โทรศัพท์</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-orange-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="service" class="block text-orange-800 font-medium mb-2">บริการที่สนใจ</label>
+                            <select id="service" class="w-full px-4 py-2 border border-orange-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="">เลือกบริการที่สนใจ</option>
+                                <option value="ad">โฆษณาบนเพจ</option>
+                                <option value="article">เขียนบทความ</option>
+                                <option value="photo">ถ่ายภาพ</option>
+                                <option value="voice">พากย์เสียง</option>
+                                <option value="review">รีวิวผลิตภัณฑ์</option>
+                                <option value="website">สร้างเว็บไซต์</option>
+                                <option value="other">อื่นๆ</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-orange-800 font-medium mb-2">รายละเอียด</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-orange-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md font-medium hover:bg-orange-600 transition">
+                            ส่งข้อมูล
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-orange-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img class="h-10 mb-4" src="https://img5.pic.in.th/file/secure-sv1/307460108_387435583599238_6386334495691428178_n-removebg-preview.png" alt="Tour Der Wang Logo">
+                    <p class="text-orange-200">
+                        ให้บริการโฆษณาและสร้างคอนเทนต์คุณภาพ 
+                        เพื่อช่วยให้ธุรกิจของคุณเติบโต
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium mb-4">บริการ</h3>
+                    <ul class="space-y-2 text-orange-200">
+                        <li><a href="#" class="hover:text-orange-100 transition">โฆษณาบนเพจ</a></li>
+                        <li><a href="#" class="hover:text-orange-100 transition">เขียนบทความ</a></li>
+                        <li><a href="#" class="hover:text-orange-100 transition">ถ่ายภาพ</a></li>
+                        <li><a href="#" class="hover:text-orange-100 transition">พากย์เสียง</a></li>
+                        <li><a href="#" class="hover:text-orange-100 transition">รีวิวผลิตภัณฑ์</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium mb-4">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2 text-orange-200">
+                        <li><a href="#services" class="hover:text-orange-100 transition">บริการ</a></li>
+                        <li><a href="#stats" class="hover:text-orange-100 transition">ผลงาน</a></li>
+                        <li><a href="#testimonials" class="hover:text-orange-100 transition">รีวิว</a></li>
+                        <li><a href="#pricing" class="hover:text-orange-100 transition">แพคเกจ</a></li>
+                        <li><a href="#contact" class="hover:text-orange-100 transition">ติดต่อเรา</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium mb-4">ติดตามเรา</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="bg-orange-800 hover:bg-orange-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-orange-800 hover:bg-orange-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-orange-800 hover:bg-orange-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-line"></i>
+                        </a>
+                        <a href="#" class="bg-orange-800 hover:bg-orange-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-orange-200">
+                        ติดตามผลงานและอัปเดตข่าวสารล่าสุด
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-orange-800 text-center text-orange-300">
+                <p>&copy; 2023 Tour Der Wang. สงวนลิขสิทธิ์ทุกประการ</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Package card hover effects
+        const packageCards = document.querySelectorAll('.package-card');
+        
+        packageCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('highlight-package')) {
+                    card.classList.add('shadow-md');
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                if (!card.classList.contains('highlight-package')) {
+                    card.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=kritskanan4/tourderwang" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
